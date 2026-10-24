@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: week-1
+
+  security:
+    user:
+      name: ${spring.name}
+      password: ${spring.password}
