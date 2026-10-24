@@ -1,6 +1,4 @@
 spring:
   docker:
     compose:
-      skip:
-        in-tests: false
-      file: compose.yaml
+      skip-in-tests: true

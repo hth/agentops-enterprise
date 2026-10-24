@@ -1,5 +1,6 @@
 package com.agentops.week1.domain.identity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -13,10 +14,19 @@ public class AppUser {
     @Id
     private UUID id;
 
+    @Column(name = "tenant_id", nullable = false)
     private UUID tenantId;
+
+    @Column(name = "email", length = 100, nullable = false)
     private String email;
+
+    @Column(name = "password_hash", length = 100, nullable = false)
     private String passwordHash;
+
+    @Column(name = "role", length = 100, nullable = false)
     private String role;
+
+    @Column(name = "status", length = 100, nullable = false)
     private String status;
 
     protected AppUser() {

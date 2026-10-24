@@ -2,6 +2,14 @@ spring:
   application:
     name: week-1
 
+  flyway:
+    enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
   security:
     oauth2:
       resourceserver:
