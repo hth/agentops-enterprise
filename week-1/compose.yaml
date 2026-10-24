@@ -1,9 +1,9 @@
 services:
   postgres:
-    image: ${DB_IMAGE}
+    image: ${DB_IMAGE:-postgres:15-alpine}
     environment:
       - 'POSTGRES_DB=${DB_NAME}'
       - 'POSTGRES_PASSWORD=${DB_PASSWORD}'
       - 'POSTGRES_USER=${DB_USER}'
     ports:
-      - '${DB_PORT}'
+      - '${DB_PORT:-5432}'
