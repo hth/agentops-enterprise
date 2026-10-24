@@ -3,6 +3,14 @@ spring:
     name: week-1
 
   security:
-    user:
-      name: ${spring.name}
-      password: ${spring.password}
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${OIDC_ISSUER_URI:http://localhost:8080/realms/agentops}
+          audiences:
+            - ${OIDC_AUDIENCE:account}
+
+# OIDC Configuration
+oidc:
+  roles-claim: ${OIDC_ROLES_CLAIM:roles}
+  role-prefix: ${OIDC_ROLE_PREFIX:ROLE_}
