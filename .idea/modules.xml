@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/agentops-enterprise.iml" filepath="$PROJECT_DIR$/.idea/agentops-enterprise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/week-1/week-1.iml" filepath="$PROJECT_DIR$/week-1/week-1.iml" />
     </modules>
   </component>
 </project>

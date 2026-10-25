@@ -1,5 +1,6 @@
 package com.agentops.week1.domain.tenant;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
@@ -15,9 +16,16 @@ public class Tenant {
     @Id
     private UUID id;
 
+    @Column(name = "name", length = 100, nullable = false)
     private String name;
+
+    @Column(name = "slug", length = 100, nullable = false)
     private String slug;
+
+    @Column(name = "status", length = 100, nullable = false)
     private String status;
+
+    @Column(name = "created_at", nullable = false)
     private Instant createdAt;
 
     protected Tenant() {
