@@ -1,4 +1,5 @@
 -- Support foreign keys that enforce tenant ownership.
+drop table conversations;
 
 ALTER TABLE app_users
     ADD CONSTRAINT uk_app_users_id_tenant
